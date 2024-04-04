@@ -97,3 +97,14 @@ async function processImage(file, leastTall, zipFilename,startpage) {
     };
     reader.readAsDataURL(file);
 }
+
+
+document.getElementById('uploadButton').addEventListener('click', function() {
+    document.getElementById('imageInput').click(); // 模擬檔案輸入點擊
+  });
+  
+  document.getElementById('imageInput').addEventListener('change', function() {
+    // 在這裡處理檔案選擇後的事件
+    console.log('檔案已選擇');
+  });
+  

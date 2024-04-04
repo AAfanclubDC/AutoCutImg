@@ -61,15 +61,15 @@
 				</ul>
 			</div>
 			<p>
-                <input type="number" id="leasthigh" placeholder="每一頁至少多長(預設2500)"><br><br>
-                <input type="number" id="pageShift" placeholder="起始頁碼(預設1)">
+				你的每一頁至少要有多長? 預設值為2500px<br>
+                <input type="number" id="leasthigh"><br><br>
+				起始頁碼為多少? 預設為1<br>
+                <input type="number" id="pageShift"><br>
                 <br>
                 <a id="downloadLink" style="display: none;">下載Zip檔案</a>
-                <!-- 隱藏原生檔案輸入 -->
-                <input type="file" id="imageInput" accept="image/*" style="display: none;" />
-                <!-- 自定義按鈕 -->
-                <button id="uploadButton">上傳圖片</button><br><br>
-
+				<input type="file" id="imageInput" accept="image/*" style="display: none;" />
+				<button onclick="document.getElementById('imageInput').click();">上傳圖片</button>
+				
                 <button onclick="handleFile()">處理圖片</button>
             
             
