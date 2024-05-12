@@ -90,7 +90,11 @@ async function processImage(file, leastTall, zipFilename,startpage) {
             grayCtx.fillRect(0, 0, grayCanvas.width, grayCanvas.height);
 
             const cutPoints = findCutPoints(grayCanvas, grayCtx, leastTall);
-            console.log(cutPoints);
+            if(img.height-cutPoints[-1] && cutPoints[-1] != 0)
+                {
+                    cutPoints.pop();
+                }
+                cutPoints.push(img.height);
             await cutAndZipImage(canvas, cutPoints, zipFilename,startpage);
         };
         img.src = event.target.result;
